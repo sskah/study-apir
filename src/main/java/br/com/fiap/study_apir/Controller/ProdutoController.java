@@ -1,5 +1,7 @@
 package br.com.fiap.study_apir.Controller;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,24 +13,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/produtos")
 public class ProdutoController {
 
-    @PostMapping("")
-    public String create() {
-        return "Produto Criado!";
-    }
+    //dois jeitos de fazer 
 
+    //1 verboso
+    @PostMapping("")
+    public ResponseEntity<String> create() {
+        return ResponseEntity.status(HttpStatus.CREATED).body("Produto Criado!");
+    }
+    
+    //2 menos verboso
     @GetMapping("/{id}")
-    public String findById() {
-        return "Banana";
+    public ResponseEntity<String> findById() {
+        return ResponseEntity.ok("banana");
     }
 
     @PutMapping("/{id}")
-    public String update() {
-        return "Produto Atualizado!";
+    public ResponseEntity<String> update() {
+        return ResponseEntity.ok("Produto Atualizado!");
     }
 
     @DeleteMapping("")
-    public String delete() {
-        return "Produto Excluido!";
+    public ResponseEntity<String> delete() {
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Produto Excluido!");
     }
 
     
