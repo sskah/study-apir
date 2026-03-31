@@ -9,9 +9,15 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.fiap</groupId>
+<<<<<<< HEAD
 	<artifactId>study_apir</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>study_apir</name>
+=======
+	<artifactId>study-apir</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>study-apir</name>
+>>>>>>> e25d90fc201d70606d54d478440bfa3ecef8b862
 	<description>API de estudo Spring Boot</description>
 	<url/>
 	<licenses>
@@ -40,6 +46,7 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 
 		<dependency>
 			<groupId>org.springdoc</groupId>
@@ -61,6 +68,8 @@
 			<scope>provided</scope>
 		</dependency>
 
+=======
+>>>>>>> e25d90fc201d70606d54d478440bfa3ecef8b862
 	</dependencies>
 
 	<build>
